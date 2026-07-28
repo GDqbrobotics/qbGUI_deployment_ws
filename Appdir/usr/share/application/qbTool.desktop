@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=qbTool
+Comment=Graphical interface for setting, testing or debugging qbrobotics devices
+Exec=qbTool
+Icon=qbTool
+Categories=Robotics;
