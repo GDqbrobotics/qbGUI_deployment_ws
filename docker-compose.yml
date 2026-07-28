@@ -1,0 +1,12 @@
+services:
+  gui_dev:
+    build: .
+    privileged: true
+    network_mode: host
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /dev:/dev
+      - .:/gui
+    environment:
+      - APP_TYPE=ALL # COMPLETE or BASIC or ALL (default)
+    command: bash -c "source /opt/qt515/bin/qt515-env.sh && qmake -v && ./gui/deploy_app.sh"
