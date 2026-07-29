@@ -53,11 +53,9 @@ for VARIANT in "${VARIANTS[@]}"; do
 
 
     echo "=== Running qmake ==="
-    if [$VARIANT = "COMPLETE"]; then
-        echo "Clean qmake files for COMPLETE version"
-        make clean
-        rm -rf qbTool Makefile .qmake.stash
-    fi
+
+    rm -rf qbTool Makefile .qmake.stash
+
     qmake
 
     echo "=== Cleaning old build ==="
